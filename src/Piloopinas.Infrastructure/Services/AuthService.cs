@@ -5,13 +5,13 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using Piloopinas.Application.DTOs.Auth;
-using Piloopinas.Application.Interfaces;
-using Piloopinas.Domain;
-using Piloopinas.Domain.Entities;
-using Piloopinas.Infrastructure.Data;
+using Lakbay.Application.DTOs.Auth;
+using Lakbay.Application.Interfaces;
+using Lakbay.Domain;
+using Lakbay.Domain.Entities;
+using Lakbay.Infrastructure.Data;
 
-namespace Piloopinas.Infrastructure.Services;
+namespace Lakbay.Infrastructure.Services;
 
 public class AuthService : IAuthService
 {

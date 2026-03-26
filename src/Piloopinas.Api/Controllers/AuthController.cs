@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Piloopinas.Application.DTOs.Auth;
-using Piloopinas.Application.Interfaces;
+using Lakbay.Application.DTOs.Auth;
+using Lakbay.Application.Interfaces;
 
-namespace Piloopinas.Api.Controllers;
+namespace Lakbay.Api.Controllers;
 
 [Route("api/v1/auth")]
 public class AuthController : AppBaseController

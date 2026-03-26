@@ -1,6 +1,6 @@
-using Piloopinas.Application.DTOs.Auth;
+using Lakbay.Application.DTOs.Auth;
 
-namespace Piloopinas.Application.Interfaces;
+namespace Lakbay.Application.Interfaces;
 
 public interface IAuthService
 {

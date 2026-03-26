@@ -1,6 +1,6 @@
-using Piloopinas.Application.DTOs.Dashboard;
+using Lakbay.Application.DTOs.Dashboard;
 
-namespace Piloopinas.Application.Interfaces;
+namespace Lakbay.Application.Interfaces;
 
 public interface IDashboardService
 {

@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Lakbay.Api/Lakbay.Api.csproj" />
+    <Project Path="src/Lakbay.Application/Lakbay.Application.csproj" />
+    <Project Path="src/Lakbay.Domain/Lakbay.Domain.csproj" />
+    <Project Path="src/Lakbay.Infrastructure/Lakbay.Infrastructure.csproj" />
+  </Folder>
+</Solution>

@@ -1,7 +1,7 @@
-using Piloopinas.Application.DTOs.Common;
-using Piloopinas.Application.DTOs.Events;
+using Lakbay.Application.DTOs.Common;
+using Lakbay.Application.DTOs.Events;
 
-namespace Piloopinas.Application.Interfaces;
+namespace Lakbay.Application.Interfaces;
 
 public interface IEventService
 {

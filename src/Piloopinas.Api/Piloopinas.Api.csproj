@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
-    <ProjectReference Include="..\Piloopinas.Application\Piloopinas.Application.csproj" />
-    <ProjectReference Include="..\Piloopinas.Infrastructure\Piloopinas.Infrastructure.csproj" />
+    <ProjectReference Include="..\Lakbay.Application\Lakbay.Application.csproj" />
+    <ProjectReference Include="..\Lakbay.Infrastructure\Lakbay.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

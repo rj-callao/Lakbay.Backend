@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Piloopinas.Application.DTOs.Events;
+namespace Lakbay.Application.DTOs.Events;
 
 public record EventDto(
     Guid Id,

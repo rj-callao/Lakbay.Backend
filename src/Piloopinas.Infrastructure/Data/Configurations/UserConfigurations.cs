@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Piloopinas.Domain.Entities;
+using Lakbay.Domain.Entities;
 
-namespace Piloopinas.Infrastructure.Data.Configurations;
+namespace Lakbay.Infrastructure.Data.Configurations;
 
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {

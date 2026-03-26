@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Piloopinas.Application.DTOs.Users;
+namespace Lakbay.Application.DTOs.Users;
 
 public record UserProfileDto(
     Guid Id,

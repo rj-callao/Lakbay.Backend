@@ -1,4 +1,4 @@
-namespace Piloopinas.Application.DTOs.Dashboard;
+namespace Lakbay.Application.DTOs.Dashboard;
 
 public record DashboardStatsDto(
     int TotalRiders,

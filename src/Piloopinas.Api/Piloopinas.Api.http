@@ -1,6 +1,6 @@
-@Piloopinas.Api_HostAddress = http://localhost:5107
+@Lakbay.Api_HostAddress = http://localhost:5107
 
-GET {{Piloopinas.Api_HostAddress}}/weatherforecast/
+GET {{Lakbay.Api_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###

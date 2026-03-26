@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Piloopinas.Application.Interfaces;
-using Piloopinas.Infrastructure.Data;
-using Piloopinas.Infrastructure.Services;
+using Lakbay.Application.Interfaces;
+using Lakbay.Infrastructure.Data;
+using Lakbay.Infrastructure.Services;
 
-namespace Piloopinas.Infrastructure;
+namespace Lakbay.Infrastructure;
 
 public static class DependencyInjection
 {

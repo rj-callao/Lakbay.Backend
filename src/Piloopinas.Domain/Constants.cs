@@ -1,4 +1,4 @@
-namespace Piloopinas.Domain;
+namespace Lakbay.Domain;
 
 public static class EventStatusConstants
 {

@@ -1,4 +1,4 @@
-namespace Piloopinas.Domain.Entities;
+namespace Lakbay.Domain.Entities;
 
 public class UserFollow
 {

@@ -1,12 +1,12 @@
 using Microsoft.EntityFrameworkCore;
-using Piloopinas.Application.DTOs.Common;
-using Piloopinas.Application.DTOs.Users;
-using Piloopinas.Application.Interfaces;
-using Piloopinas.Domain;
-using Piloopinas.Domain.Entities;
-using Piloopinas.Infrastructure.Data;
+using Lakbay.Application.DTOs.Common;
+using Lakbay.Application.DTOs.Users;
+using Lakbay.Application.Interfaces;
+using Lakbay.Domain;
+using Lakbay.Domain.Entities;
+using Lakbay.Infrastructure.Data;
 
-namespace Piloopinas.Infrastructure.Services;
+namespace Lakbay.Infrastructure.Services;
 
 public class UserService : IUserService
 {

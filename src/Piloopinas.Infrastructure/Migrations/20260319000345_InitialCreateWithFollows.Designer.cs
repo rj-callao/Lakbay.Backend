@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Piloopinas.Infrastructure.Data;
+using Lakbay.Infrastructure.Data;
 
 #nullable disable
 
-namespace Piloopinas.Infrastructure.Migrations
+namespace Lakbay.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20260319000345_InitialCreateWithFollows")]
@@ -25,7 +25,7 @@ namespace Piloopinas.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.Badge", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.Badge", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -141,7 +141,7 @@ namespace Piloopinas.Infrastructure.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.Event", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.Event", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -246,7 +246,7 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.ToTable("Events");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.EventRegistration", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.EventRegistration", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -330,7 +330,7 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.ToTable("EventRegistrations");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.EventStatus", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.EventStatus", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -396,7 +396,7 @@ namespace Piloopinas.Infrastructure.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.Motorcycle", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.Motorcycle", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -464,7 +464,7 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.ToTable("Motorcycles");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.RefreshToken", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.RefreshToken", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -508,7 +508,7 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.ToTable("RefreshTokens");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.Role", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.Role", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -550,7 +550,7 @@ namespace Piloopinas.Infrastructure.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.User", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -648,7 +648,7 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.UserBadge", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.UserBadge", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -677,7 +677,7 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.ToTable("UserBadges");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.UserFollow", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.UserFollow", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -702,9 +702,9 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.ToTable("UserFollows");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.Event", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.Event", b =>
                 {
-                    b.HasOne("Piloopinas.Domain.Entities.EventStatus", "Status")
+                    b.HasOne("Lakbay.Domain.Entities.EventStatus", "Status")
                         .WithMany("Events")
                         .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -713,20 +713,20 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.Navigation("Status");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.EventRegistration", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.EventRegistration", b =>
                 {
-                    b.HasOne("Piloopinas.Domain.Entities.Event", "Event")
+                    b.HasOne("Lakbay.Domain.Entities.Event", "Event")
                         .WithMany("Registrations")
                         .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Piloopinas.Domain.Entities.Motorcycle", "Motorcycle")
+                    b.HasOne("Lakbay.Domain.Entities.Motorcycle", "Motorcycle")
                         .WithMany()
                         .HasForeignKey("MotorcycleId")
                         .OnDelete(DeleteBehavior.SetNull);
 
-                    b.HasOne("Piloopinas.Domain.Entities.User", "User")
+                    b.HasOne("Lakbay.Domain.Entities.User", "User")
                         .WithMany("EventRegistrations")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.NoAction)
@@ -739,9 +739,9 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.Motorcycle", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.Motorcycle", b =>
                 {
-                    b.HasOne("Piloopinas.Domain.Entities.User", "User")
+                    b.HasOne("Lakbay.Domain.Entities.User", "User")
                         .WithMany("Motorcycles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -750,9 +750,9 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.RefreshToken", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.RefreshToken", b =>
                 {
-                    b.HasOne("Piloopinas.Domain.Entities.User", "User")
+                    b.HasOne("Lakbay.Domain.Entities.User", "User")
                         .WithMany("RefreshTokens")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -761,9 +761,9 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.User", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.User", b =>
                 {
-                    b.HasOne("Piloopinas.Domain.Entities.Role", "Role")
+                    b.HasOne("Lakbay.Domain.Entities.Role", "Role")
                         .WithMany("Users")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -772,15 +772,15 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.UserBadge", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.UserBadge", b =>
                 {
-                    b.HasOne("Piloopinas.Domain.Entities.Badge", "Badge")
+                    b.HasOne("Lakbay.Domain.Entities.Badge", "Badge")
                         .WithMany("UserBadges")
                         .HasForeignKey("BadgeId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("Piloopinas.Domain.Entities.User", "User")
+                    b.HasOne("Lakbay.Domain.Entities.User", "User")
                         .WithMany("UserBadges")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -791,15 +791,15 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.UserFollow", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.UserFollow", b =>
                 {
-                    b.HasOne("Piloopinas.Domain.Entities.User", "Follower")
+                    b.HasOne("Lakbay.Domain.Entities.User", "Follower")
                         .WithMany("Following")
                         .HasForeignKey("FollowerId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Piloopinas.Domain.Entities.User", "Following")
+                    b.HasOne("Lakbay.Domain.Entities.User", "Following")
                         .WithMany("Followers")
                         .HasForeignKey("FollowingId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -810,27 +810,27 @@ namespace Piloopinas.Infrastructure.Migrations
                     b.Navigation("Following");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.Badge", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.Badge", b =>
                 {
                     b.Navigation("UserBadges");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.Event", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.Event", b =>
                 {
                     b.Navigation("Registrations");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.EventStatus", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.EventStatus", b =>
                 {
                     b.Navigation("Events");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.Role", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.Role", b =>
                 {
                     b.Navigation("Users");
                 });
 
-            modelBuilder.Entity("Piloopinas.Domain.Entities.User", b =>
+            modelBuilder.Entity("Lakbay.Domain.Entities.User", b =>
                 {
                     b.Navigation("EventRegistrations");
 

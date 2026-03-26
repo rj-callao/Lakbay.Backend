@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using Piloopinas.Domain;
-using Piloopinas.Domain.Entities;
-using Piloopinas.Infrastructure.Data;
+using Lakbay.Domain;
+using Lakbay.Domain.Entities;
+using Lakbay.Infrastructure.Data;
 
-namespace Piloopinas.Infrastructure.Services;
+namespace Lakbay.Infrastructure.Services;
 
 public class DatabaseSeeder
 {
@@ -17,12 +17,12 @@ public class DatabaseSeeder
     public async Task SeedAsync()
     {
         // Seed admin user
-        if (!await _context.Users.AnyAsync(u => u.Email == "admin@piloopinas.com"))
+        if (!await _context.Users.AnyAsync(u => u.Email == "admin@Lakbay.com"))
         {
             _context.Users.Add(new User
             {
                 Id = Guid.NewGuid(),
-                Email = "admin@piloopinas.com",
+                Email = "admin@Lakbay.com",
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword("Admin@123"),
                 FirstName = "System",
                 LastName = "Administrator",

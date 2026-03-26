@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Piloopinas.Application.Interfaces;
+using Lakbay.Application.Interfaces;
 
-namespace Piloopinas.Api.Controllers;
+namespace Lakbay.Api.Controllers;
 
 [Route("api/v1/dashboard")]
 [Authorize]

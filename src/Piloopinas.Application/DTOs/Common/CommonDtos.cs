@@ -1,4 +1,4 @@
-namespace Piloopinas.Application.DTOs.Common;
+namespace Lakbay.Application.DTOs.Common;
 
 public record PagedResult<T>(
     List<T> Items,

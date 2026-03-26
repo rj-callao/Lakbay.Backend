@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Piloopinas.Infrastructure;
-using Piloopinas.Infrastructure.Data;
-using Piloopinas.Infrastructure.Services;
+using Lakbay.Infrastructure;
+using Lakbay.Infrastructure.Data;
+using Lakbay.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -58,9 +58,9 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "Piloopinas API",
+        Title = "Lakbay API",
         Version = "v1",
-        Description = "API for the Piloopinas Motorcycle Endurance Platform"
+        Description = "API for the Lakbay Motorcycle Endurance Platform"
     });
 
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -96,7 +96,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Piloopinas API v1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Lakbay API v1");
     });
 }
 

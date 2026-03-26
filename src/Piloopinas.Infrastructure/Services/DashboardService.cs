@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using Piloopinas.Application.DTOs.Dashboard;
-using Piloopinas.Application.Interfaces;
-using Piloopinas.Domain;
-using Piloopinas.Infrastructure.Data;
+using Lakbay.Application.DTOs.Dashboard;
+using Lakbay.Application.Interfaces;
+using Lakbay.Domain;
+using Lakbay.Infrastructure.Data;
 
-namespace Piloopinas.Infrastructure.Services;
+namespace Lakbay.Infrastructure.Services;
 
 public class DashboardService : IDashboardService
 {

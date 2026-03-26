@@ -1,4 +1,4 @@
-# Piloopinas Backend
+# Lakbay Backend
 
 ASP.NET Core 10 Web API using Clean Architecture, Entity Framework Core, and SQL Server LocalDB.
 
@@ -17,19 +17,19 @@ ASP.NET Core 10 Web API using Clean Architecture, Entity Framework Core, and SQL
 
 ```bash
 git clone <repo-url>
-cd Piloopinas/Piloopinas.Backend
+cd Lakbay/Lakbay.Backend
 ```
 
 ### 2. Create the database migration
 
 ```bash
-dotnet ef migrations add InitialCreate --project src/Piloopinas.Infrastructure --startup-project src/Piloopinas.Api
+dotnet ef migrations add InitialCreate --project src/Lakbay.Infrastructure --startup-project src/Lakbay.Api
 ```
 
 ### 3. Run the application
 
 ```bash
-dotnet run --project src/Piloopinas.Api
+dotnet run --project src/Lakbay.Api
 ```
 
 The API will start on **http://localhost:5107**. On first run it will automatically:
@@ -44,14 +44,14 @@ Or test login via terminal:
 ```bash
 curl -X POST http://localhost:5107/api/v1/auth/login \
   -H "Content-Type: application/json" \
-  -d "{\"email\":\"admin@piloopinas.com\",\"password\":\"Admin@123\"}"
+  -d "{\"email\":\"admin@Lakbay.com\",\"password\":\"Admin@123\"}"
 ```
 
 ## Default Credentials
 
 | User | Email | Password | Role |
 |------|-------|----------|------|
-| Admin | admin@piloopinas.com | Admin@123 | Admin |
+| Admin | admin@Lakbay.com | Admin@123 | Admin |
 | Juan Dela Cruz | juan@example.com | Rider@123 | Rider |
 | Maria Santos | maria@example.com | Rider@123 | Rider |
 | Pedro Reyes | pedro@example.com | Rider@123 | Rider |
@@ -59,13 +59,13 @@ curl -X POST http://localhost:5107/api/v1/auth/login \
 ## Project Structure
 
 ```
-Piloopinas.Backend/
+Lakbay.Backend/
 ├── src/
-│   ├── Piloopinas.Api/              # Controllers, middleware, DI config
-│   ├── Piloopinas.Application/      # DTOs, interfaces, contracts
-│   ├── Piloopinas.Domain/           # Entities, constants
-│   └── Piloopinas.Infrastructure/   # EF Core, service implementations
-└── Piloopinas.slnx                  # Solution file
+│   ├── Lakbay.Api/              # Controllers, middleware, DI config
+│   ├── Lakbay.Application/      # DTOs, interfaces, contracts
+│   ├── Lakbay.Domain/           # Entities, constants
+│   └── Lakbay.Infrastructure/   # EF Core, service implementations
+└── Lakbay.slnx                  # Solution file
 ```
 
 ## Useful Commands
@@ -75,12 +75,12 @@ Piloopinas.Backend/
 dotnet build
 
 # Run
-dotnet run --project src/Piloopinas.Api
+dotnet run --project src/Lakbay.Api
 
 # Reset database
-dotnet ef database drop --project src/Piloopinas.Infrastructure --startup-project src/Piloopinas.Api --force
-dotnet ef migrations remove --project src/Piloopinas.Infrastructure --startup-project src/Piloopinas.Api --force
-dotnet ef migrations add InitialCreate --project src/Piloopinas.Infrastructure --startup-project src/Piloopinas.Api
+dotnet ef database drop --project src/Lakbay.Infrastructure --startup-project src/Lakbay.Api --force
+dotnet ef migrations remove --project src/Lakbay.Infrastructure --startup-project src/Lakbay.Api --force
+dotnet ef migrations add InitialCreate --project src/Lakbay.Infrastructure --startup-project src/Lakbay.Api
 ```
 
 ## Setting Up a Multi-Project Workspace (VS Code)
@@ -89,18 +89,18 @@ To work on both **Backend** and **Frontend** in a single VS Code window:
 
 1. Open VS Code
 2. Go to **File → Add Folder to Workspace...**
-3. Add the `Piloopinas.Backend` folder
+3. Add the `Lakbay.Backend` folder
 4. Go to **File → Add Folder to Workspace...** again
-5. Add the `Piloopinas.Frontend` folder
-6. Go to **File → Save Workspace As...** and save as `Piloopinas.code-workspace` in the parent `Piloopinas/` folder
+5. Add the `Lakbay.Frontend` folder
+6. Go to **File → Save Workspace As...** and save as `Lakbay.code-workspace` in the parent `Lakbay/` folder
 
-Or create a `Piloopinas.code-workspace` file manually in the parent directory:
+Or create a `Lakbay.code-workspace` file manually in the parent directory:
 
 ```json
 {
   "folders": [
-    { "path": "Piloopinas.Backend" },
-    { "path": "Piloopinas.Frontend" }
+    { "path": "Lakbay.Backend" },
+    { "path": "Lakbay.Frontend" }
   ],
   "settings": {}
 }

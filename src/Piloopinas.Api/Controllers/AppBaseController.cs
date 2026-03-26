@@ -1,7 +1,7 @@
 using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Piloopinas.Api.Controllers;
+namespace Lakbay.Api.Controllers;
 
 [ApiController]
 [Produces("application/json")]

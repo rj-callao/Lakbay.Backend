@@ -1,8 +1,0 @@
-<Solution>
-  <Folder Name="/src/">
-    <Project Path="src/Piloopinas.Api/Piloopinas.Api.csproj" />
-    <Project Path="src/Piloopinas.Application/Piloopinas.Application.csproj" />
-    <Project Path="src/Piloopinas.Domain/Piloopinas.Domain.csproj" />
-    <Project Path="src/Piloopinas.Infrastructure/Piloopinas.Infrastructure.csproj" />
-  </Folder>
-</Solution>

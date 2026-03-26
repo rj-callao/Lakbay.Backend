@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Piloopinas.Application.DTOs.Auth;
+namespace Lakbay.Application.DTOs.Auth;
 
 public record LoginRequest(
     [Required] [EmailAddress] string Email,

@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using Piloopinas.Domain;
-using Piloopinas.Domain.Entities;
+using Lakbay.Domain;
+using Lakbay.Domain.Entities;
 
-namespace Piloopinas.Infrastructure.Data;
+namespace Lakbay.Infrastructure.Data;
 
 public class AppDbContext : DbContext
 {

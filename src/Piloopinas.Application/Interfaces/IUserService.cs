@@ -1,7 +1,7 @@
-using Piloopinas.Application.DTOs.Common;
-using Piloopinas.Application.DTOs.Users;
+using Lakbay.Application.DTOs.Common;
+using Lakbay.Application.DTOs.Users;
 
-namespace Piloopinas.Application.Interfaces;
+namespace Lakbay.Application.Interfaces;
 
 public interface IUserService
 {
